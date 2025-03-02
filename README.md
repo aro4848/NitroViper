@@ -1,5 +1,5 @@
 
-NitroViper is a lightning-fast Discord Nitro code sniping bot designed to detect and redeem gift codes in real-time. With multi-account support, instant redemption, and webhook notifications, NitroViper strikes swiftly and silently, ensuring no code slips through the cracks.
+NitroViper is a lightning-fast Discord Nitro code sniping bot designed to detect and redeem gift codes in real-time. With multi-account support, instant redemption, and webhook notifications, NitroViper strikes swiftly and silently, ensuring no code slips through the cracks. (nitro sniper)
 
 Strike Fast. Redeem Faster. 
 
