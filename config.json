@@ -1,0 +1,11 @@
+{
+    "webhook_url": "yo webhok",
+    "github_repo_url": "https://github.com/aro4848/NitroViper",
+    "watcher_tokens": [
+      "put the token that looks for nitros here u can put multiple tokens here"
+    ],
+    "redeemer_token": "the token that will redeem the nitro."
+  }
+
+
+
