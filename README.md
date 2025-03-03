@@ -24,3 +24,9 @@ Strike Fast. Redeem Faster.
 [![GitHub Stars](https://img.shields.io/github/stars/aro4848/NitroViper?style=flat-square)](https://github.com/your-username/NitroViper)  
 
 I (as aro4848) dont give a fuck if something happens to ur account. since this will violate the **TOS** of **Discord**. so dont complain if you got banned. <ins>Msg me if u needed any help on discord.</ins> text
+
+
+
+
+
+![nitrosuccess](https://github.com/user-attachments/assets/dfde9813-e584-414e-9867-a1745874bb72)
