@@ -9,11 +9,11 @@ Strike Fast. Redeem Faster.
 >
 > 👥 Multi-Account Support : Deploy multiple watcher accounts for maximum coverage.
 >
-> 🎯 Instant Redemption : Redeem valid codes faster than ever.
+> 🎯 Instant Redemption : Redeem valid codes faster than any human.
 >
 >🔔 Webhook Notifications : Get real-time alerts for success, failure, or already-redeemed codes.
 >
->🔒 Secure & Reliable : Protects your tokens and prevents duplicate attempts.
+
 
 
 
