@@ -9,7 +9,7 @@ import os
 REQUIRED_MODULES = ["discord", "aiohttp", "ctypes", "json", "re", "asyncio", "datetime"]
 
 def clear_terminal():
-    # I love reina.
+    # I love my girl
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def ensure_dependencies():
