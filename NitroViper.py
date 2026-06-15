@@ -273,9 +273,3 @@ ensure_dependencies()
 #بسمالله الرحمن الرحيم.
 #In the name of Allah, the Most Gracious, the Most Merciful
 #58:15 Allah has prepared for them a severe punishment. Indeed, it was evil that they were doing.
-
-#3/2/2025 i made this.
-#3/2/2025 i made this.
-#3/2/2025 i made this.
-#6/25/2024 you made me go insane..
-# i dont fucking know why and how i made this.
