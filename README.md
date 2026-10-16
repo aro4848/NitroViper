@@ -1,28 +1,39 @@
-# **NitroViper**
-
-> Strike Fast. Redeem Faster.
+# NitroViper
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-aro22-7289DA)](https://discord.com/users/aro22)
 [![GitHub Stars](https://img.shields.io/github/stars/aro4848/NitroViper?style=flat-square)](https://github.com/aro4848/NitroViper)
 
-Ultra high-speed Discord Nitro sniper engineered with raw asynchronous WebSockets and pre-warmed HTTP/2 keep-alive pools.
+discord nitro sniper. strike fast, redeem faster.
 
----
+most snipers out there rely on bloated libraries like discord.py that load giant guild caches and waste 200ms before they even see the message. NitroViper connects straight to the raw discord gateway websocket (v9) and fires claims over an already pre-warmed keep-alive http pool before other bots even process the event.
 
-### 🚀 Key Features
+```text
+                    ***********####
+                   ******************##
+                   #***************######
+                         *****+===+*#######
+            *** ************-.......:+######
+            ##  #######****..:------..=#####
+                  ****####-.:--------.:#####
+                  ########=.:--------.:#####
+                     #####*:.:-----:.*#####
+                      ######+::...::=######
+                       ###################               [skibidi]- made by skibidi aro https://github.com/aro4848
+                        #################                 [discord]: https://discord.com/users/aro22 on discord
+                           ############                   [Engine: NitroViper Ultra-Fast]
+```
 
-- ⚡ **Raw Gateway Engine (v9)**: Zero-overhead WebSocket message stream with direct opcode dispatch (<1ms processing latency).
-- 🏎️ **Pre-warmed Keep-Alive HTTP Pool**: Maintains hot TLS sockets to `discord.com` to eliminate TCP/TLS handshake latency upon code redemption.
-- 🔑 **Automatic Windows DPAPI Token Discovery**: Auto-detects and decrypts active session tokens directly from local Discord Desktop installations.
-- 👥 **Multi-Account Watcher Aggregation**: Concurrently monitor hundreds of servers across multiple watcher accounts.
-- 🛡️ **Context-Aware Redemption**: Dynamically injects origin `channel_id` and authentic desktop client headers (`X-Super-Properties`) to bypass bot heuristics.
-- 🔔 **Non-Blocking Webhooks**: Webhook notifications run in isolated background tasks and never delay the critical claiming path.
+### how it works
 
----
+- **raw websocket gateway**: listens directly on `wss://gateway.discord.gg/?v=9&encoding=json` with sub-microsecond string checks before regex.
+- **pre-warmed tls pool**: keeps an open tcp connection hot to discord so claims dispatch in <1ms without handshake delay.
+- **zero config token grabber**: decrypts active tokens straight out of your local discord desktop app (dpapi + leveldb) on windows. no need to paste tokens manually.
+- **origin spoofing**: passes the real channel_id and authentic desktop client headers (`X-Super-Properties`) so discord doesn't auto-reject claims with 400.
+- **multi-watcher**: listen across multiple accounts and hundreds of servers at the same time.
+- **async webhooks**: webhook alerts run in background tasks so notifications never slow down the claiming path.
 
-### 📦 Installation
+### setup
 
 ```bash
 git clone https://github.com/aro4848/NitroViper.git
@@ -30,31 +41,29 @@ cd NitroViper
 pip install aiohttp pywin32 cryptography
 ```
 
----
+### run
 
-### ⚙️ Quick Start
+```bash
+python NitroViper.py
+```
 
-1. Run the script:
-   ```bash
-   python NitroViper.py
-   ```
-2. **Zero-Configuration Mode**: If running on Windows with Discord Desktop logged in, NitroViper will automatically discover and use your active session tokens.
-3. **Manual Configuration** (Optional): Edit `config.json` to customize your webhook URL or add secondary watcher tokens:
-   ```json
-   {
-       "webhook_url": "YOUR_WEBHOOK_URL",
-       "github_repo_url": "https://github.com/aro4848/NitroViper",
-       "watcher_tokens": [
-           "SECONDARY_WATCHER_TOKEN_HERE"
-       ],
-       "redeemer_token": "MAIN_ACCOUNT_TOKEN_HERE"
-   }
-   ```
+if discord desktop is running or logged in on your pc, it will automatically find your session and start watching all your servers.
 
----
+if you want to use multiple accounts or add a webhook, edit `config.json`:
 
-### ⚠️ Disclaimer
+```json
+{
+    "webhook_url": "YOUR_DISCORD_WEBHOOK_URL",
+    "github_repo_url": "https://github.com/aro4848/NitroViper",
+    "watcher_tokens": [
+        "SECONDARY_ACCOUNT_TOKEN"
+    ],
+    "redeemer_token": "MAIN_ACCOUNT_TOKEN"
+}
+```
 
-I (as aro4848) dont give a fuck if something happens to ur account. since this will violate the **TOS** of **Discord**. so dont complain if you got banned. <ins>Msg me if u needed any help on discord.</ins>
+### disclaimer
+
+I (as aro4848) dont give a fuck if something happens to ur account. selfbots violate discord TOS so dont complain if you get banned. if you need help msg me on discord: **aro22**
 
 ![nitrosuccess](https://github.com/user-attachments/assets/dfde9813-e584-414e-9867-a1745874bb72)
